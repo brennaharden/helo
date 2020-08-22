@@ -2,6 +2,7 @@ import React from 'react';
 import {withRouter} from 'react-router-dom';
 import Nav from './Components/Nav/Nav'
 import routes from './routes.js';
+import './reset.css'
 import './App.css';
 
 

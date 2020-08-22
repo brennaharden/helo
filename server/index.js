@@ -27,6 +27,10 @@ massive({
 app.post('/auth/register', ctrl.register);
 app.post('/auth/login', ctrl.login);
 app.get('/auth/user', ctrl.getUser);
-app.get('/auth/logout', ctrl.logout);
+app.post('/auth/logout', ctrl.logout);
+app.get('/api/posts', ctrl.getPosts);
+app.get('/api/post/:postid', ctrl.getPost);
+app.post('/api/post', ctrl.addPost);
+app.delete('/api/post/:postid', ctrl.deletePost);
 
 app.listen(SERVER_PORT, () => console.log(`here comes the hateful ${SERVER_PORT}`))

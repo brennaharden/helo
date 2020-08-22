@@ -10,8 +10,10 @@ class Nav extends React.Component {
         this.props.getUser();
     }
 
+
+
     logout = () => {
-        axios.get('/auth/logout').then( res => {
+        axios.post('/auth/logout').then( res => {
             this.props.logoutUser();
             this.props.history.push('/');
         }).catch(err => console.log(err))
@@ -23,7 +25,7 @@ class Nav extends React.Component {
 
         return <div className="nav">
             <img className="profile-pic" src={profilePicture} alt={username}/>
-            <h1>{username}</h1>
+            <h2>{username}</h2>
             <div className="links">
             <span><Link to="/dashboard">Home</Link></span>
             <span><Link to="/new">New Post</Link></span>
