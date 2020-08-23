@@ -70,7 +70,7 @@ class Post extends React.Component {
                         <div className="right-box">
                         <p className="post-copy">{content}</p>
                         {id === authorId ? (
-                            <button onClick={() => this.deletePost}>Delete Post</button>
+                            <button onClick={this.deletePost}>Delete Post</button>
                         ): null}
                         </div>
                     </div>

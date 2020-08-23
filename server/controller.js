@@ -100,7 +100,7 @@ module.exports = {
     deletePost: async (req, res) => {
         const db = req.app.get('db');
         const {postid} = req.params
-        await db.delete_post(postid)
-        res.sendStatus(200)
+        const newList = await db.delete_post(postid)
+        res.status(200).send(newList)
     }
 }
